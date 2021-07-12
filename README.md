@@ -1,2 +1,7 @@
 - A client-server application for a 3-player game. There are 2 games in this the repository. 
+- Each player proposes a word consisting of at least 6 letters and each player tries to guess the words/ models proposed by the other players. Player / Players who get / get the most points after 3 rounds, win the game. Each user can do the following:
+1. Login. After successful authentication, a new window opens in which a field is displayed for entering the word proposed by the player and a "Start game" button. Only after three players log in to the application, enter their word/ model and press the "Start game" button, the game will start. to at the start of the game, the server will send the ids/ usernames of the other players to all players and the positions for each letter of the word proposed by each player.
+2. Guess the letter/ model. Each player chooses one of the other two players and enters a letter that he believes that it appears in the word proposed by that player. After all players have submitted their proposals to the server.
+3. A REST service that allows the visualization of the words/ models proposed by the players at the beginning of the game for a certain game.
+4. A REST service that for a certain game and a certain player allows the visualization of the 3 proposals and the score obtained in each round
 - Java Database, Java Spring, JavaFX, ORM Hibernate and Rest Services were used for the application.
