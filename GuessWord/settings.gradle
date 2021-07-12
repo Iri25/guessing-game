@@ -1,0 +1,9 @@
+rootProject.name = 'GuessWord'
+include 'model'
+include 'persistence'
+include 'services'
+include 'server'
+include 'client'
+include 'rest'
+include 'orm'
+

@@ -1,0 +1,10 @@
+rest/MainRestServices.java
+ rest.MainRestServices
+rest/services/WordController.java
+ rest.services.WordController
+rest/MainRestClient.java
+ rest.MainRestClient
+rest/services/RoundController.java
+ rest.services.RoundController
+rest/services/Client.java
+ rest.services.Client

@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'GuessWord'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 15
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}

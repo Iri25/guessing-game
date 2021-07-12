@@ -1,0 +1,18 @@
+domain/Player.java
+ domain.Player
+domain/validators/ValidationException.java
+ domain.validators.ValidationException
+domain/validators/PlayerValidator.java
+ domain.validators.PlayerValidator
+domain/validators/Validator.java
+ domain.validators.Validator
+domain/Entity.java
+ domain.Entity
+domain/validators/RoundValidator.java
+ domain.validators.RoundValidator
+domain/Round.java
+ domain.Round
+domain/Word.java
+ domain.Word
+domain/validators/WordValidator.java
+ domain.validators.WordValidator
