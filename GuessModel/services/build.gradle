@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'GuessWord'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 15
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project (':model')
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

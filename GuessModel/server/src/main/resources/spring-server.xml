@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd
+                                 http://www.springframework.org/schema/context
+                                 http://www.springframework.org/schema/context/spring-context.xsd
+                                 http://www.springframework.org/schema/util
+                                 http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="jdbcProps" location="classpath:app.config"/>
+
+    <bean id="playerValidator" class="domain.validators.PlayerValidator"/>
+
+    <bean id="playerRepository" class="repository.jdbc.PlayerJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+        <constructor-arg ref="playerValidator" />
+    </bean>
+
+    <bean id="wordValidator" class="domain.validators.ModelValidator"/>
+
+    <bean id="wordRepository" class="repository.jdbc.ModelJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+        <constructor-arg ref="wordValidator" />
+    </bean>
+
+    <bean id="roundValidator" class="domain.validators.RoundValidator"/>
+
+    <bean id="roundRepository" class="repository.jdbc.RoundJdbcRepository">
+        <constructor-arg ref="jdbcProps" />
+        <constructor-arg ref="roundValidator" />
+    </bean>
+
+    <bean id="serv" class="server.Server">
+        <constructor-arg ref="playerRepository"/>
+        <constructor-arg ref="wordRepository"/>
+        <constructor-arg ref="roundRepository"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="GuessWord"/>
+        <property name="service" ref="serv"/>
+        <property name="serviceInterface" value="service.IServices"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+</beans>

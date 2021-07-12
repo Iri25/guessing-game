@@ -1,0 +1,18 @@
+domain/Model.java
+ domain.Model
+domain/validators/RoundValidator.java
+ domain.validators.RoundValidator
+domain/validators/ValidationException.java
+ domain.validators.ValidationException
+domain/validators/Validator.java
+ domain.validators.Validator
+domain/Entity.java
+ domain.Entity
+domain/Round.java
+ domain.Round
+domain/validators/ModelValidator.java
+ domain.validators.ModelValidator
+domain/validators/PlayerValidator.java
+ domain.validators.PlayerValidator
+domain/Player.java
+ domain.Player

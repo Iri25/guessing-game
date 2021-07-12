@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'GuessWord'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 15
+mainClassName='MainORMHibernate'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':model')
+
+    compile project(':persistence')
+
+    runtime group: 'org.xerial', name: 'sqlite-jdbc', version: '3.34.0'
+
+    compile 'org.hibernate:hibernate-core:5.4.31.Final'
+}
