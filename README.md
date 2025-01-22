@@ -2,13 +2,13 @@
 
 JavaSpring project that contains 2 client-server applications structured on 7 modules with layered architecture:
 - The model module comprises the data access layer with its validation (domain package).
-- The entity data has been mapped with Hibernate ORM (Object Relational Mapping).
-- The persistence module comprises the persistence layer with Java Database Connectivity (JDBC) for accessing the relational databases from Java program (repository package) and the services module contains the business layer which is an interface of all services (service package).
+- The entity data has been mapped with `Hibernate ORM` (Object Relational Mapping).
+- The persistence module comprises the persistence layer with `Java Database Connectivity` (JDBC) for accessing the relational databases from Java program (repository package) and the services module contains the business layer which is an interface of all services (service package).
 - The server module implements all the functionalities required for the client module that comprises the presentation layer (controller package).
 - The rest module implements all rest services for controllers.
-- The data is saved in the SQLite database using the connection configurations from the app.config file (client and server package).
-- The Java library, Apache Log4j was used for messages history and the all log events are retained in log files with Loggers objects (client and server package).
-- The interaction with the user is done through a graphical interface (GUI), developed in JavaFX (fxml files are found in views package).
+- The data is saved in the `SQLite database` using the connection configurations from the app.config file (client and server package).
+- The Java library, `Apache Log4j` was used for messages history and the all log events are retained in log files with `Loggers objects` (client and server package).
+- The interaction with the user is done through a graphical interface (GUI), developed in `JavaFX` (fxml files are found in views package).
 
 ## Key concepts:
 - abstraction
